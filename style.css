@@ -6,7 +6,7 @@
     width: 600px;
     height: 500px;
     transform: translate(-50%,-50%);
-    background: url("/foto/file.jpg");
+    background: url("/foto/background.png");
 }
 canvas{
     position: absolute;
