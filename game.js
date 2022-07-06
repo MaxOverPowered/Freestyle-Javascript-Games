@@ -18,6 +18,11 @@ const context4 = canvas4.getContext('2d')
 canvas4.width = 600;
 canvas4.height = 600;
 
+const canvas5 = document.getElementById('myCanvas5')
+const context5 = canvas4.getContext('2d')
+canvas5.width = 600;
+canvas5.height = 600;
+
 // global variables
 const grid = 80;
 let keys = [];
@@ -38,7 +43,7 @@ const background_lv2 = new Image();
 background_lv2.src = 'foto/background_lvl2.png';
 
 const grass = new Image();
-grass.src = "foto/grass.png"
+grass.src = "foto/grass.png";
 
 const collisions = new Image()
 collisions.src = 'foto/collisions.png';
@@ -47,15 +52,18 @@ const turtles = new Image();
 turtles.src = 'foto/turtles.png';
 
 const log = new Image();
-log.src = 'foto/log.png'
+log.src = 'foto/log.png';
 
 const car = new Image();
 car.src = 'foto/cars.png';
 let numerOfCars = 3;
 
 const froggerSprite = new Image();
-froggerSprite.src = 'foto/frog_spritesheet.png'
+froggerSprite.src = 'foto/frog_spritesheet.png';
 
+
+const gameOver = new Image();
+gameOver.src = 'foto/gameover.png';
 
 class Character {
     constructor() {
@@ -63,9 +71,9 @@ class Character {
         this.spriteHeight = 250;
         this.width = this.spriteWidth / 5;
         this.height = this.spriteHeight / 5;
-        this.x = canvas.width / 2 - this.width / 2
+        this.x = canvas.width / 2 - this.width / 2;
         this.y = canvas.height - this.height - 40;
-        this.moving = false
+        this.moving = false;
         this.frameX = 0;
         this.frameY = 0;
     }
@@ -109,8 +117,11 @@ class Character {
     }
 
     jump() {
-        if (this.moving === false) this.frameX = 1;
-        else if (this.framex === 1) this.frameX = 0;
+        if (this.moving === false) {
+            this.frameX = 1;
+        } else if (this.frameX === 1) {
+            this.frameX = 0;
+        }
     }
 }
 
@@ -125,13 +136,13 @@ animate() {
     context2.clearRect(0, 0, canvas.width, canvas.height);
     context3.clearRect(0, 0, canvas.width, canvas.height);
     context4.clearRect(0, 0, canvas.width, canvas.height);
-    handleRipples()
+    handleRipples();
     context2.drawImage(background_lv2, 0, 0, canvas.width, canvas.height);
     handleParticles();
     character.draw();
     character.update();
     handleObstacles();
-    handleScoreBoard()
+    handleScoreBoard();
     context4.drawImage(grass, 0, 0, canvas.width, canvas.height);
     frame++;
     requestAnimationFrame(animate);
@@ -139,6 +150,9 @@ animate() {
 
 animate()
 
+function sleep(time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+}
 
 // event listeners
 window.addEventListener('keydown', function (e) {
@@ -147,6 +161,13 @@ window.addEventListener('keydown', function (e) {
         if (Object.keys[37] || Object.keys[38] || Object.keys[39] || Object.keys[40]) {
             character.jump();
         }
+        if (Object.keys[32]) {//reset game
+            collisionsCount--;
+                resetGame()
+
+
+        }
+
     }
 )
 ;
@@ -160,7 +181,7 @@ window.addEventListener(
 );
 
 function scored() {
-    score++
+    score++;
     gameSpeed += 0.05;
     character.x = canvas.width / 2 - character.width / 2;
     character.y = canvas.height - character.height - 40;
@@ -168,11 +189,11 @@ function scored() {
 
 function handleScoreBoard() {
     context4.fillStyle = 'black';
-    context4.stokeStyle = 'black'
+    context4.stokeStyle = 'black';
     context4.font = '15px Verdana';
-    context4.strokeText('Score', 265, 15)
-    context4.font = '60px Verdana'
-    context4.fillText(score, 270, 65)
+    context4.strokeText('Score', 265, 15);
+    context4.font = '60px Verdana';
+    context4.fillText(score, 270, 65);
     context4.font = '15px Verdana';
     context4.strokeText('Collisions: ' + collisionsCount, 10, 175);
     context4.strokeText('Game Speed: ' + gameSpeed.toFixed(1), 10, 195);
@@ -250,7 +271,7 @@ function initObstacles() {
     }
     for (let i = 0; i < 2; i++) {
         let x = i * 300;
-        carsArray.push(new Obstacle(x, canvas.height - grid * 3 - 20, grid * 2, grid, -2))
+        carsArray.push(new Obstacle(x, canvas.height - grid * 3 - 20, grid * 2, grid, -2, 'car'));
     }
     for (let i = 0; i < 2; i++) {
         let x = i * 400;
@@ -283,11 +304,13 @@ function handleObstacles() {
     for (let i = 0; i < logsArray.length; i++) {
         if (collision(character, carsArray[i])) {
             context4.drawImage(collisions, 0, 100, 100, 100, character.x, character.y, 50, 50);
+            context5.drawImage(gameOver,canvas.width,canvas.height)
+            resetGame()
 
         }
-
     }
 }
+
 
 handleObstacles();
 
