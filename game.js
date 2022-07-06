@@ -33,7 +33,7 @@ velocity:{
 
 const enemy = new Fighter({
 position: {
-    x:970,
+    x:975,
     y:100
 },
 velocity:{
