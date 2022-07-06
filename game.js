@@ -121,11 +121,16 @@ function rectangularCollision({rectangle1, rectangle2}) {
     )
 }
 
-let timer = 10
+let timer = 300
 function decreaseTimer(){
-    if(timer > 0)
-
+    if(timer > 0) {
+        setTimeout(decreaseTimer, 1000)
+        timer--
+        document.querySelector('#timer').innerHTML = "<h2>"+timer+"</h2>"
+    }
+    if(player.health === enemy.health) {console.log('tie');}
 }
+decreaseTimer()
 
 function animate() {
     window.requestAnimationFrame(animate)
