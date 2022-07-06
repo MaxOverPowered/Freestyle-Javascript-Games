@@ -16,6 +16,16 @@ const background = new Sprite({
     imageSrc: './img/background2.png'
 })
 
+const flame = new Sprite({
+    position: {
+        x:740,
+        y:150
+    },
+    imageSrc: './img/flames.png',
+    scale : 2.5,
+    framesMax : 17
+})
+
 const player = new Fighter({
 position: {
     x:0,
@@ -28,6 +38,13 @@ velocity:{
     offset:{
     x: 0,
     y: 0
+    },
+    imageSrc: './img/BladeKeeper/idle.png',
+    scale : 5,
+    framesMax : 8,
+    offset:{
+    x: 450,
+    y:450
     }
 })
 
@@ -67,51 +84,14 @@ const keys = {
     }
 }
 
-function rectangularCollision({rectangle1, rectangle2}) {
-    return(
-        rectangle1.attackBox.position.x + rectangle1.attackBox.width >=
-        rectangle2.position.x && rectangle1.attackBox.position.x <= rectangle2.position.x + rectangle2.width &&
-        rectangle1.attackBox.position.y + rectangle1.attackBox.height >= rectangle2.position.y
-        && rectangle1.attackBox.position.y <= rectangle2.position.y + rectangle2.height
-    )
-}
-
-function determineWinner({player, enemy, timerId}){
-    clearTimeout(timerId)
-    document.querySelector('#displayText').style.display = 'flex'
-    if(player.health === enemy.health) {
-            document.querySelector('#displayText').innerHTML = "Oh no! It's a Tie !"
-        }
-        else if(player.health > enemy.health) {
-            document.querySelector('#displayText').innerHTML = "Player 1 wins !"
-        }
-        else if(player.health < enemy.health) {
-            document.querySelector('#displayText').innerHTML = "Player 2 wins !"
-        }
-}
-
-let timer = 20
-let timerId
-function decreaseTimer(){
-    if(timer > 0) {
-        timerId = setTimeout(decreaseTimer, 1000)
-        timer--
-        document.querySelector("#timer").innerHTML = timer
-    }
-    if(timer === 0){
-        determineWinner({player, enemy, timerId})
-
-
-    }
-}
 decreaseTimer()
-
 
 function animate() {
     window.requestAnimationFrame(animate)
     c.fillStyle = 'black'
     c.fillRect(0, 0, canvas.width, canvas.height)
     background.update()
+    flame.update()
     player.update()
     enemy.update()
 
