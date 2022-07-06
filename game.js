@@ -126,7 +126,7 @@ function decreaseTimer(){
     if(timer > 0) {
         setTimeout(decreaseTimer, 1000)
         timer--
-        document.querySelector('#timer').innerHTML = "<h2>"+timer+"</h2>"
+        document.querySelector('#timer').innerHTML = timer
     }
     if(player.health === enemy.health) {console.log('tie');}
 }
