@@ -28,14 +28,13 @@ class Player {
     this.width = 66;
     this.height = 150;
     this.image = createImage(spriteStandRight);
-    this.frames = 0;
   }
   draw() {
     c.drawImage(
       this.image,
       0,
       -125,
-      250 * this.frames,
+      250,
       500,
       this.position.x,
       this.position.y,
@@ -45,8 +44,6 @@ class Player {
   }
 
   update() {
-    this.frames++;
-    
     this.draw();
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
