@@ -53,7 +53,7 @@ velocity:{
     scale : 4.5,
     framesMax : 8,
     offset:{
-    x: 450,
+    x: 540,
     y:450
     },
     sprites : {
@@ -82,7 +82,7 @@ velocity:{
 
 const enemy = new Fighter({
 position: {
-    x:975,
+    x:1050,
     y:100
 },
 velocity:{
@@ -99,7 +99,7 @@ velocity:{
     framesMax : 10,
     offset:{
     x: 450,
-    y:450
+    y:250
     },
     sprites : {
     idle : {
@@ -179,8 +179,18 @@ function animate() {
 
     if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft'){
         enemy.velocity.x = -5
+        enemy.switchSprite('run')
     } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight'){
         enemy.velocity.x = 5
+        enemy.switchSprite('run')
+    } else {
+        enemy.switchSprite('idle')
+    }
+
+    if (enemy.velocity.y < 0){
+        enemy.switchSprite('jump')
+    }else if (enemy.velocity.y > 0){
+        enemy.switchSprite('fall')
     }
 
     if (
@@ -241,7 +251,7 @@ window.addEventListener('keydown', (event) => {
             enemy.velocity.y = -15
             break
         case 'ArrowDown':
-            enemy.isAttacking = true
+            enemy.attack()
             break
     }
 })
