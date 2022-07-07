@@ -201,7 +201,6 @@ function handleScoreBoard() {
     context4.font = '60px Verdana';
     context4.fillText(score, 270, 65);
     context4.font = '15px Verdana';
-    context4.strokeText('Collisions: ' + collisionsCount, 10, 175);
     context4.strokeText('Game Speed: ' + gameSpeed.toFixed(1), 10, 195);
 }
 
@@ -217,7 +216,6 @@ function resetGame() {
     character.x = canvas.width / 2 - character.width / 2;
     character.y = canvas.height - character.height - 40;
     score = 0;
-    collisionsCount++;
     gameSpeed = 1;
 }
 
@@ -421,6 +419,7 @@ async function handleRipples() {
             for (let i = 0; i < 30; i++) {
                 ripplesArray.unshift(new Particle(character.x, character.y))
             }
+            context5.drawImage(gameOver, canvas.width, canvas.height)
             document.querySelector("#displayText").innerHTML = "You Lose!Reset in 5 seconds";
             await sleep(5000)
             document.querySelector("#displayText").innerHTML = "  ";
