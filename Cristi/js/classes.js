@@ -126,12 +126,13 @@ class Fighter extends Sprite {
   }
 
   attack() {
-    this.switchSprite('attack')
+    this.switchSprite('attack1')
     this.isAttacking = true
   }
 
   takeHit() {
-    this.health -= 20
+    this.health -= 10
+
     if (this.health <= 0) {
       this.switchSprite('death')
     } else this.switchSprite('takeHit')
@@ -146,8 +147,8 @@ class Fighter extends Sprite {
 
     // overriding all other animations with the attack animation
     if (
-      this.image === this.sprites.attack.image &&
-      this.framesCurrent < this.sprites.attack.framesMax - 1
+      this.image === this.sprites.attack1.image &&
+      this.framesCurrent < this.sprites.attack1.framesMax - 1
     )
       return
 
@@ -189,10 +190,10 @@ class Fighter extends Sprite {
         }
         break
 
-      case 'attack':
-        if (this.image !== this.sprites.attack.image) {
-          this.image = this.sprites.attack.image
-          this.framesMax = this.sprites.attack.framesMax
+      case 'attack1':
+        if (this.image !== this.sprites.attack1.image) {
+          this.image = this.sprites.attack1.image
+          this.framesMax = this.sprites.attack1.framesMax
           this.framesCurrent = 0
         }
         break
