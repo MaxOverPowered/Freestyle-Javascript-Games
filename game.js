@@ -150,8 +150,8 @@ animate() {
 
 animate()
 
-function sleep(time) {
-    return new Promise((resolve) => setTimeout(resolve, time));
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 // event listeners
@@ -163,7 +163,7 @@ window.addEventListener('keydown', function (e) {
         }
         if (Object.keys[32]) {//reset game
             collisionsCount--;
-                resetGame()
+            resetGame()
 
 
         }
@@ -180,11 +180,17 @@ window.addEventListener(
     }
 );
 
-function scored() {
+async function scored() {
     score++;
     gameSpeed += 0.05;
     character.x = canvas.width / 2 - character.width / 2;
     character.y = canvas.height - character.height - 40;
+    document.querySelector("#displayText").style.display = "flex";
+    document.querySelector("#displayText").innerHTML = "You win!Score is " + score;
+    await sleep(1200)
+    document.querySelector("#displayText").innerHTML = "  ";
+
+
 }
 
 function handleScoreBoard() {
@@ -289,7 +295,7 @@ function initObstacles() {
 
 initObstacles();
 
-function handleObstacles() {
+async function handleObstacles() {
     for (let i = 0; i < carsArray.length; i++) {
         carsArray[i].update();
         carsArray[i].draw();
@@ -304,7 +310,11 @@ function handleObstacles() {
     for (let i = 0; i < logsArray.length; i++) {
         if (collision(character, carsArray[i])) {
             context4.drawImage(collisions, 0, 100, 100, 100, character.x, character.y, 50, 50);
-            context5.drawImage(gameOver,canvas.width,canvas.height)
+            context5.drawImage(gameOver, canvas.width, canvas.height)
+            document.querySelector("#displayText").style.display = "flex";
+            document.querySelector("#displayText").innerHTML = "You Lose!Reset in 5 seconds";
+            await sleep(2000)
+            document.querySelector("#displayText").innerHTML = "  ";
             resetGame()
 
         }
@@ -312,7 +322,7 @@ function handleObstacles() {
 }
 
 
-handleObstacles();
+handleObstacles()
 
 
 class Particle {
@@ -383,7 +393,7 @@ function handleParticles() {
     }
 }
 
-function handleRipples() {
+async function handleRipples() {
     for (let i = 0; i < ripplesArray.length; i++) {
         ripplesArray[i].ripple();
         ripplesArray[i].drawRipple();
@@ -411,6 +421,9 @@ function handleRipples() {
             for (let i = 0; i < 30; i++) {
                 ripplesArray.unshift(new Particle(character.x, character.y))
             }
+            document.querySelector("#displayText").innerHTML = "You Lose!Reset in 5 seconds";
+            await sleep(5000)
+            document.querySelector("#displayText").innerHTML = "  ";
             resetGame();
         }
 
