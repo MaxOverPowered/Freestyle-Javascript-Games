@@ -1137,6 +1137,13 @@ function init() {
   scrollOffset = 0;
 }
 
+window.onload = function () {
+  if (!window.location.hash) {
+    window.location = window.location + "#loaded";
+    window.location.reload();
+  }
+};
+
 function animate() {
   return _animate.apply(this, arguments);
 } // let timer = 3;
