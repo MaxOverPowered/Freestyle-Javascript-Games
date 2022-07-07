@@ -4,11 +4,7 @@
     <list default="true" id="bbd72f11-45b2-4391-a67e-68ffd52dc2a1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/MartialHero/Idle.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/MartialHero/Idle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/MartialHero/attack.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/MartialHero/attack.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/MartialHero/jump_down.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/MartialHero/jump_down.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/MartialHero/jump_up.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/MartialHero/jump_up.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/MartialHero/run.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/MartialHero/run.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/classes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/classes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +45,7 @@
       <workItem from="1657088068695" duration="15148000" />
       <workItem from="1657106767860" duration="3306000" />
       <workItem from="1657122366640" duration="16211000" />
-      <workItem from="1657173718627" duration="9158000" />
+      <workItem from="1657173718627" duration="10154000" />
     </task>
     <servers />
   </component>

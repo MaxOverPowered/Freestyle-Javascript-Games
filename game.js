@@ -50,11 +50,11 @@ velocity:{
     y: 0
     },
     imageSrc: './img/BladeKeeper/idle.png',
-    scale : 4.5,
+    scale : 3.5,
     framesMax : 8,
     offset:{
-    x: 540,
-    y:450
+    x: 340,
+    y:330
     },
     sprites : {
     idle : {
@@ -77,6 +77,14 @@ velocity:{
         imageSrc : './img/BladeKeeper/attack.png',
         framesMax :8,
         }
+    },
+    attackBox:{
+    offset:{
+        x: 0,
+        y: 0
+    },
+        width: 100,
+        height: 50
     }
 })
 
@@ -95,11 +103,11 @@ velocity:{
     y: 0
     },
     imageSrc: './img/MartialHero/idle.png',
-    scale : 4.5,
+    scale : 3.5,
     framesMax : 10,
     offset:{
     x: 450,
-    y:250
+    y:180
     },
     sprites : {
     idle : {
