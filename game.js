@@ -308,7 +308,6 @@ async function handleObstacles() {
     for (let i = 0; i < logsArray.length; i++) {
         if (collision(character, carsArray[i])) {
             context4.drawImage(collisions, 0, 100, 100, 100, character.x, character.y, 50, 50);
-            context5.drawImage(gameOver, canvas.width, canvas.height)
             document.querySelector("#displayText").style.display = "flex";
             document.querySelector("#displayText").innerHTML = "You Lose!Reset in 5 seconds";
             await sleep(2000)
@@ -419,7 +418,6 @@ async function handleRipples() {
             for (let i = 0; i < 30; i++) {
                 ripplesArray.unshift(new Particle(character.x, character.y))
             }
-            context5.drawImage(gameOver, canvas.width, canvas.height)
             document.querySelector("#displayText").innerHTML = "You Lose!Reset in 5 seconds";
             await sleep(5000)
             document.querySelector("#displayText").innerHTML = "  ";
