@@ -3,20 +3,19 @@ import hills from "../img/hills.png";
 const canvas = document.querySelector("canvas");
 import background from "../img/background.png";
 import platformSmallTall from "../img/platformSmallTall.png";
-
-import spriteRunLeft from "../img/spriteRunLeft.png";
-import spriteRunRight from "../img/spriteRunRight.png";
-import spriteStandLeft from "../img/spriteStandLeft.png";
 import spriteStandRight from "../img/spriteStandRight.png";
-
 const c = canvas.getContext("2d");
 canvas.width = 1024;
 canvas.height = 576;
 const gravity = 1.5;
+const regeneratorRuntime = require("regenerator-runtime");
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 class Player {
   constructor() {
-    this.speed = 7;
+    this.speed = 20;
     this.position = {
       x: 100,
       y: 100,
@@ -263,7 +262,7 @@ function init() {
 
   scrollOffset = 0;
 }
-function animate() {
+async function animate() {
   requestAnimationFrame(animate);
   c.fillStyle = "white";
   c.fillRect(0, 0, canvas.width, canvas.height);
@@ -316,13 +315,30 @@ function animate() {
       player.velocity.y = 0;
     }
   });
+
   if (scrollOffset > platformImage.width * 18 + 100 - 2) {
     console.log("You win");
+    document.querySelector("#displayText").style.display = "flex";
+    document.querySelector("#displayText").innerHTML = "You win!";
+    await sleep(3000);
+    document.querySelector("#displayText").innerHTML = " ";
+    init();
   }
   if (player.position.y > canvas.height) {
     init();
   }
 }
+
+// let timer = 3;
+// let timerId;
+// function decreaseTimer() {
+//   if (timer > 0) {
+//     timerId = setTimeout(decreaseTimer, 1000);
+//     timer--;
+//     document.querySelector("#timer").innerHTML = timer;
+//   }
+// }
+
 init();
 animate();
 
