@@ -8,6 +8,10 @@
     transform: translate(-50%,-50%);
     background: url("./foto/background.png");
 }
+
+.controls {
+    margin: 5px;
+}
 canvas{
     position: absolute;
     top: 0;

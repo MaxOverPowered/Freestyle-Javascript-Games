@@ -1,81 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        .title {
+            text-align: center;
+            color: white;
+        }
+
+        body {
+            background: url("./foto/backgroundwelcome.jpg");
+        }
+
+        .card {
+            background-color: rgba(0, 0, 0, 0.2)!important;
+        }
+
+        .card-title {
+            color: white;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <title>Wellcom</title>
+    <title>Welcome</title>
 </head>
 <body>
-<div class="container">
-    <div class="title game   ">
-        <div class="badge" style="border:none">
-            <span class="icon games"></span>
-        </div>
-        <h2>Choose your game</h2>
-    </div>
+<div class="container title">
+    <br>
+    <h1><b>Choose a game</b></h1>
+    <br>
+    <br>
 </div>
-<section class="horizontal-grid">
-    <div class="swiper-container horizontal-grid-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
-        <div class="swiper-wrapper viewfinder" style="transform: translate3d(0px, 0px, 0px);"><a
-                class="swiper-slide swiper-slide-active" id="50293" link="index.html" type="GAME"
-                href="index.html">
-            <article class="card game vertical">
-                <div class="ribbon ribbon-card">
+<div class="container games">
+    <div class="row align-items-start">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://www.cbc.ca/kids/images/jumperfrog_thumbnail.jpg"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><b>Frogger</b></h5>
+                    <p class="card-text"></p>
+                    <a href="index.html" class="btn btn-primary">Play</a>
                 </div>
-                <div class="thumbnail ">
-                    <figure class="image"><img class=" lazy"
-                                               src="https://www.cbc.ca/kids/images/jumperfrog_thumbnail.jpg"
-                                               data-src="https://cn.i.cdn.ti-platform.com/content/683/toon-cup/game/ro/tooncup-21-v02-1600x900-ro.6172193d.jpg?imwidth=300"
-                                               alt="Cupa Cartoon" width="300" height=""></figure>
-                </div>
-            </article>
-        </a>
-            <div data-id="" id="ad_rect_btf_01" class="ad-placement swiper-slide swiper-slide-next"
-                 data-advertising-message="Publicitate" data-google-query-id="CIn1hqPt4_gCFXWAgwcdf6UPlA">
-                <div id="google_ads_iframe_/99911224/cn_ro/home_2__container__"
-                     style="border: 0pt none; width: 300px; height: 0px;"></div>
             </div>
-            <a class="swiper-slide" target="_self" id="49861" link="/jocuri/gumball-voteaza-i-pe-gumball/joaca"
-               type="GAME" href="/jocuri/gumball-voteaza-i-pe-gumball/joaca">
-                <article class="card game vertical">
-                    <div class="thumbnail ">
-                        <figure class="image"><img class=" lazy"
-                                                   src="https://gmedia.playstation.com/is/image/SIEPDC/best-fighting-games-street-fighter-5-ce-image-block-01-en-23jul21?$native--t$"
-                                                   data-src="https://cn.i.cdn.ti-platform.com/content/229/vote-for-gumball/game/ro/voteforgumball_1600x900-ro.f696508b.jpg?imwidth=300"
-                                                   alt="Votează-l pe Gumball" width="300" height=""></figure>
-                    </div>
-                    <div class="data">
-                        <div class="data-category-container">
-                            <div class="data-category"><span class="title game">Uimitoarea lume a lui Gumball</span>
-                            </div>
-                        </div>
-                        <div class="badge" style="border:none"><span class="icon games"></span></div>
-                        <div class="data-title" aria-label="Votează-l pe Gumball">Votează-l pe Gumball</div>
-                    </div>
-                </article>
-            </a><a class="swiper-slide" target="_self" id="47668"
-                   link="/jocuri/haideti-tineri-titani-duelul-fotbalistic-2021/joaca" type="GAME"
-                   href="http://192.168.0.110:3000/">
-                <article class="card game vertical">
-                    <div class="thumbnail ">
-                        <figure class="image"><img class=" lazy"
-                                                   src="https://cdn.discordapp.com/attachments/955392477840416798/994192906938220614/SUPER50JUMPER.png"
-                                                   data-src="https://cn.i.cdn.ti-platform.com/content/625/penalty-power-2021/game/ro/penaltypower2021-1600x900-ro.313a076d.jpg?imwidth=300"
-                                                   alt="Duelul fotbalistic 2021" width="300" height=""></figure>
-                    </div>
-                    <div class="data">
-                        <div class="data-category-container">
-                            <div class="data-category"><span class="title game">Haideți, tineri titani!</span></div>
-                        </div>
-                        <div class="badge" style="border:none"><span class="icon games"></span></div>
-                        <div class="data-title" aria-label="Duelul fotbalistic 2021">Duelul fotbalistic 2021</div>
-                    </div>
-                </article>
-            </a>
-</section>
-<div class="container"><a class="cta" link="jocuri" href="/jocuri">
-    <div class="more-button headings-text game dark
-      " style="background-color:#000"><span class="icon game"></span><span style="color:#fff" class="text title-short">UITĂ-TE LA TOATE JOCURILE</span><span
-            class="icon arrow rotate"></span></div>
-</a></div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top"
+                     src="https://cdn.discordapp.com/attachments/955392477840416798/994192906938220614/SUPER50JUMPER.png"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><b>Super 50</b></h5>
+                    <p class="card-text"></p>
+                    <a href="http://192.168.0.116:3000" class="btn btn-primary">Play</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top"
+                     src="https://gmedia.playstation.com/is/image/SIEPDC/best-fighting-games-street-fighter-5-ce-image-block-01-en-23jul21?$native--t$"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><b>Fight Club</b></h5>
+                    <p class="card-text"></p>
+                    <a href="#" class="btn btn-primary">Play</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
