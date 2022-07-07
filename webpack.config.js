@@ -39,9 +39,9 @@ module.exports = {
       notify: false
     }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: 'indexx.html',
       favicon: 'favicon.ico',
-      template: 'src/index.html'
+      template: 'src/indexx.html'
     })
   ],
   watch: true,
