@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/freestyle-javascript-game-javascript-MaxOverPowered.iml" filepath="$PROJECT_DIR$/.idea/freestyle-javascript-game-javascript-MaxOverPowered.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/Dinu_Game.iml" filepath="$PROJECT_DIR$/.idea/Dinu_Game.iml" />
+>>>>>>> dinu
     </modules>
   </component>
 </project>
