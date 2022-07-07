@@ -4,9 +4,17 @@
     <list default="true" id="bbd72f11-45b2-4391-a67e-68ffd52dc2a1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/background3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Martial Hero 3/Martial Hero 3/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Martial Hero 3/Martial Hero 3/Preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Martial Hero 3/Martial Hero 3/Sprite/Attack1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Martial Hero 3/Martial Hero 3/Sprite/Attack2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Martial Hero 3/Martial Hero 3/Sprite/Attack3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Martial Hero 3/Martial Hero 3/Sprite/Death.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Martial Hero 3/Martial Hero 3/Sprite/Going Down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Martial Hero 3/Martial Hero 3/Sprite/Going Up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Martial Hero 3/Martial Hero 3/Sprite/Idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Martial Hero 3/Martial Hero 3/Sprite/Run.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Martial Hero 3/Martial Hero 3/Sprite/Take Hit.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/classes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/classes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +55,8 @@
       <workItem from="1656998347458" duration="15209000" />
       <workItem from="1657088068695" duration="15148000" />
       <workItem from="1657106767860" duration="3306000" />
-      <workItem from="1657122366640" duration="15901000" />
+      <workItem from="1657122366640" duration="16211000" />
+      <workItem from="1657173718627" duration="3172000" />
     </task>
     <servers />
   </component>

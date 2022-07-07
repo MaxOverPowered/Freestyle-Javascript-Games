@@ -40,11 +40,21 @@ velocity:{
     y: 0
     },
     imageSrc: './img/BladeKeeper/idle.png',
-    scale : 5,
+    scale : 4.5,
     framesMax : 8,
     offset:{
     x: 450,
     y:450
+    },
+    sprites : {
+    idle : {
+        imageSrc : './img/BladeKeeper/idle.png',
+        framesMax : 8,
+    },
+        run : {
+        imageSrc : './img/BladeKeeper/run.png',
+        framesMax : 8,
+        }
     }
 })
 
@@ -93,13 +103,14 @@ function animate() {
     background.update()
     flame.update()
     player.update()
-    enemy.update()
+    //enemy.update()
 
     player.velocity.x = 0
     enemy.velocity.x = 0
 
     if (keys.a.pressed && player.lastKey === 'a'){
         player.velocity.x = -5
+        player.image = player.sprites.run.image
     } else if (keys.d.pressed && player.lastKey === 'd'){
         player.velocity.x = 5
     }
