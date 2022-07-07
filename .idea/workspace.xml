@@ -44,18 +44,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "10.19.0",
-    "javascript.nodejs.core.library.typings.version": "10.17.60",
-    "last_opened_file_path": "/home/maxim/Codecool/Web/webWeek4/freestyle-javascript-game-javascript-MaxOverPowered",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;10.19.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;10.17.60&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/maxim/Codecool/Web/webWeek4/freestyle-javascript-game-javascript-MaxOverPowered&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JavaScript Debug.wellcom.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/freestyle-javascript-game-javascript-MaxOverPowered/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -68,10 +68,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.game.js" />
         <item itemvalue="JavaScript Debug.wellcom.html" />
         <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="Node.js.game.js" />
-        <item itemvalue="Node.js.game.js" />
+        <item itemvalue="JavaScript Debug.wellcom.html" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
