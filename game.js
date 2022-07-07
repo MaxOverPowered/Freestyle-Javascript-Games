@@ -26,6 +26,16 @@ const flame = new Sprite({
     framesMax : 17
 })
 
+const flame2 = new Sprite({
+    position: {
+        x:40,
+        y:150
+    },
+    imageSrc: './img/flames.png',
+    scale : 2.5,
+    framesMax : 17
+})
+
 const player = new Fighter({
 position: {
     x:0,
@@ -54,6 +64,18 @@ velocity:{
         run : {
         imageSrc : './img/BladeKeeper/run.png',
         framesMax : 8,
+        },
+        jump : {
+        imageSrc : './img/BladeKeeper/jump_up.png',
+        framesMax : 3,
+        },
+        fall : {
+        imageSrc : './img/BladeKeeper/jump_down.png',
+        framesMax :3,
+        },
+        attack : {
+        imageSrc : './img/BladeKeeper/attack.png',
+        framesMax :8,
         }
     }
 })
@@ -71,6 +93,35 @@ velocity:{
     offset:{
     x: -50,
     y: 0
+    },
+    imageSrc: './img/MartialHero/idle.png',
+    scale : 4.5,
+    framesMax : 10,
+    offset:{
+    x: 450,
+    y:450
+    },
+    sprites : {
+    idle : {
+        imageSrc : './img/MartialHero/idle.png',
+        framesMax : 10,
+    },
+        run : {
+        imageSrc : './img/MartialHero/run.png',
+        framesMax : 8,
+        },
+        jump : {
+        imageSrc : './img/MartialHero/jump_up.png',
+        framesMax : 3,
+        },
+        fall : {
+        imageSrc : './img/MartialHero/jump_down.png',
+        framesMax :3,
+        },
+        attack : {
+        imageSrc : './img/MartialHero/attack.png',
+        framesMax :7,
+        }
     }
 })
 
@@ -102,17 +153,28 @@ function animate() {
     c.fillRect(0, 0, canvas.width, canvas.height)
     background.update()
     flame.update()
+    flame2.update()
     player.update()
-    //enemy.update()
+    enemy.update()
 
     player.velocity.x = 0
     enemy.velocity.x = 0
 
+
     if (keys.a.pressed && player.lastKey === 'a'){
         player.velocity.x = -5
-        player.image = player.sprites.run.image
+        player.switchSprite('run')
     } else if (keys.d.pressed && player.lastKey === 'd'){
         player.velocity.x = 5
+        player.switchSprite('run')
+    }else{
+        player.switchSprite('idle')
+    }
+
+    if (player.velocity.y < 0){
+        player.switchSprite('jump')
+    }else if (player.velocity.y > 0){
+        player.switchSprite('fall')
     }
 
     if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft'){

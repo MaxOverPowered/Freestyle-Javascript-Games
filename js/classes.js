@@ -109,13 +109,60 @@ class Fighter extends Sprite{
 
         if (this.position.y + this.height + this.velocity.y >= canvas.height - 80) {
             this.velocity.y = 0
+            this.position.y = 350
         } else this.velocity.y += gravity
     }
 
     attack() {
+        this.switchSprite('attack')
         this.isAttacking = true
         setTimeout(() => {
             this.isAttacking = false
         }, 100)
+    }
+
+    switchSprite(sprite){
+        if (this.image === this.sprites.attack.image &&
+            this.framesCurrent < this.sprites.attack.framesMax -1
+        )
+            return
+
+        switch (sprite){
+            case 'idle':
+                if (this.image !== this.sprites.idle.image) {
+                    this.image = this.sprites.idle.image
+                    this.framesMax = this.sprites.idle.framesMax
+                    this.framesCurrent = 0
+                }
+                break
+            case 'run':
+                if (this.image !== this.sprites.run.image) {
+                    this.image = this.sprites.run.image
+                    this.framesMax = this.sprites.run.framesMax
+                    this.framesCurrent = 0
+                }
+                break
+            case 'jump':
+                if (this.image !== this.sprites.jump.image) {
+                    this.image = this.sprites.jump.image
+                    this.framesMax = this.sprites.jump.framesMax
+                    this.framesCurrent = 0
+                }
+                break
+            case 'fall':
+                if (this.image !== this.sprites.fall.image) {
+                    this.image = this.sprites.fall.image
+                    this.framesMax = this.sprites.fall.framesMax
+                    this.framesCurrent = 0
+                }
+                break
+            case 'attack':
+                if (this.image !== this.sprites.attack.image) {
+                    this.image = this.sprites.attack.image
+                    this.framesMax = this.sprites.attack.framesMax
+                    this.framesCurrent = 0
+                }
+                break
+        }
     }
 }
