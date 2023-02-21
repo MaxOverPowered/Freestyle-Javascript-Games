@@ -9,13 +9,13 @@
 In this project, I have created three mini-games using JavaScript. The first game is a fighting game where the player has to defeat their opponent using different moves. The second game is about a frog crossing the street and avoiding obstacles to get to the other side. The third game is an obstacle course where an avatar must jump over obstacles to reach the finish line.
 
 ## Installation
-To run the games, you can simply clone the repository and open the index.html file in your browser.
+To run the games, you can simply clone the repository and open the [index.html] file in your browser.
 
 
 ### Copy code
-git clone [myRepo]
-cd [repository-name]
-open index.html
+git clone [myRepo];
+cd [repository-name];
+open index.html;
 
 ## Features
 #### Fighting game: 
